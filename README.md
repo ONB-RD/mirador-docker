@@ -7,5 +7,5 @@ The image is on [Dockerhub](https://hub.docker.com/r/coy123/mirador/) under the 
 
 Run it using the -p parameter to specify the port. The default port for Mirador is 8000.
 
-**Running example:** 'docker run --nammirador -p 8888:8000 -it coy123/mirador'
+**Running example:** 'docker run --name mirador -p 8888:8000 -it coy123/mirador'
 This example binds the port to 8888 and names the container 'mirador'. Mirador Viewer can be accessed at [localhost:8888].
