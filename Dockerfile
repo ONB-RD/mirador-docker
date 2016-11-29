@@ -10,4 +10,4 @@ RUN cd mirador && npm install
 RUN cd mirador && bower --allow-root install
 RUN cd mirador && grunt
 
-CMD cd mirador && grunt server
+CMD cd mirador && grunt serve
