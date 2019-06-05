@@ -1,7 +1,8 @@
 FROM alpine:latest as downloader
 RUN apk add --no-cache curl jq
 # Depends on: Github API v3, release file named 'build.tar.gz', extracting to '/build'
-RUN curl -s https://api.github.com/repos/ProjectMirador/mirador/releases/latest \
+#Mirador Version 2.7.0
+RUN curl -s https://api.github.com/repos/ProjectMirador/mirador/releases/14911692 \
     | jq '.assets[] | select(.name == "build.tar.gz") | .browser_download_url' \
     | xargs curl -sLO
 RUN tar xfz build.tar.gz
