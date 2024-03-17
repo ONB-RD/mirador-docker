@@ -8,7 +8,7 @@ RUN curl -s https://api.github.com/repos/ProjectMirador/mirador/releases/1491169
 RUN tar xfz build.tar.gz
 RUN curl -OJL https://github.com/ProjectMirador/mirador/raw/develop/index.html
 
-FROM nginx:alpine as server
+FROM nginx:1.25.4-alpine3.18 as server
 COPY --from=downloader /build /usr/share/nginx/html/build
 COPY --from=downloader /index.html /usr/share/nginx/html/index.html
 EXPOSE 80
